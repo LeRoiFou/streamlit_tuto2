@@ -6,11 +6,13 @@ streamlit ne va pas réexécuter à nouveau l'application
 st.session_state permet de ne pas réinitialiser la valeur d'une valeur lorsqu'on
 réexécute l'application
 
+Le décorateur cache function permet d'exécuter une fonction lorsque les paramètres
+de cette fonction ont été changées. A défaut de ce décorateur, si on change les
+paramètres de la fonction dans l'application, streamlit ne prendra pas en compte
+le changement de ces paramètres
 """
 
 import streamlit as st
-import pandas as pd
-from pandas_datareader import data as pdr
 
 def form():
     """
@@ -57,6 +59,7 @@ def session():
         
     st.write(st.session_state.counter, "This is a session state value")
     st.write(not_a_session_state, "This is not a session state value")
+    
 
 if __name__ == '__main__':
     
