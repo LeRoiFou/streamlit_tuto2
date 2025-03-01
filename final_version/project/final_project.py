@@ -109,11 +109,11 @@ def metrics(data_price):
 if __name__ == "__main__":
 
     ####### PAGE CONFIG ###########################
-    st.set_page_config(
-    page_title="udemy_project_screener",
-    page_icon="📈",
-    initial_sidebar_state="expanded",
-    )
+    # st.set_page_config(
+    # page_title="udemy_project_screener",
+    # page_icon="📈",
+    # initial_sidebar_state="expanded",
+    # )
     
     st.title('S&P500 Screener & Stock Analysis')
     st.sidebar.title('Search criteria')
